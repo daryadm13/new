@@ -1,0 +1,12 @@
+@media (min-width: @tablet-width)  and (max-width: @max-tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  .form__button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}

@@ -1,0 +1,130 @@
+.cost__label {
+  display: none;
+}
+
+.cost__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  margin-bottom: 24px;
+}
+
+.cost__input {
+  min-width: 105px;
+  background: #ffffff;
+  border: 2px solid #9070ec;
+  border-radius: 4px;
+  text-align: center;
+  padding: 6px 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: @black;
+}
+
+.cost__input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+.cost__input::-webkit-outer-spin-button,
+.cost__input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.cost__input:hover,
+.cost__input:focus,
+.cost__input:active {
+  border-color: #593cac;
+}
+
+.cost__input::placeholder {
+  color: #bdbdbd;
+}
+
+.cost__between {
+  background: #bdbdbd;
+  width: 10px;
+  height: 2px;
+  margin: auto;
+}
+
+
+.cost__range-scale {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  height: 4px;
+  margin-bottom: 32px;
+  background-color: #e2e2e2;
+}
+
+.cost__range-bar {
+  position: relative;
+  height: 4px;
+  background-color: @base;
+  width: 86%;
+}
+
+.cost__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid @base;
+  padding: 0;
+}
+
+.cost__toggle::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.cost__toggle:hover.cost__toggle::after,
+.cost__toggle:focus.cost__toggle::after {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.cost__toggle:active.cost__toggle::after {
+  background-color: @base;
+}
+
+.cost__toggle:disabled {
+  border-color: #e2e2e2;
+}
+
+.cost__toggle--min {
+  top: -8px;
+  left: 0;
+}
+
+.cost__toggle--max {
+  top: -8px;
+  right: 0;
+}
+
+.cost::-webkit-outer-spin-button,
+.cost::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .cost__input {
+    min-width: 74px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cost__wrapper {
+    grid-template-columns: 1fr 50px 1fr;
+  }
+}

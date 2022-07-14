@@ -1,0 +1,59 @@
+.htmlacademy {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  padding: 20px 20px 30px 20px;
+  border-top: 1px solid #f0ebff;
+}
+
+.htmlacademy__link {
+  display: flex;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.htmlacademy__text,
+.htmlacademy__name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #bdbdbd;
+  padding: 0;
+  margin: 0;
+}
+
+.htmlacademy__logo {
+  fill: #bdbdbd;
+}
+
+.htmlacademy__link:hover .htmlacademy__logo,
+.htmlacademy__link:focus .htmlacademy__logo {
+  fill: @base;
+}
+
+.htmlacademy__link:active .htmlacademy__logo {
+  fill: #593cac;
+}
+
+.htmlacademy__link:hover .htmlacademy__name,
+.htmlacademy__link:focus .htmlacademy__name {
+  color: @base;
+}
+
+.htmlacademy__link:active .htmlacademy__name {
+  color: #593cac;
+}
+
+@media (min-width: @tablet-width) {
+  .htmlacademy {
+    padding: 40px 20px 40px 20px;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .htmlacademy {
+    padding: 20px 40px 40px 40px;
+  }
+}
